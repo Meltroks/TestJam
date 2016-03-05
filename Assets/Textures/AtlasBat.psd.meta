@@ -1,13 +1,22 @@
 fileFormatVersion: 2
 guid: e9df79d1b747045d7a75d6b61581fd85
-timeCreated: 1457190612
+timeCreated: 1457191414
 licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: AtlasBat_0
+    21300002: AtlasBat_1
+    21300004: AtlasBat_2
+    21300006: AtlasBat_3
+    21300008: AtlasBat_4
+    21300010: AtlasBat_5
+    21300012: AtlasBat_6
+    21300014: AtlasBat_7
+    21300016: AtlasBat_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -29,8 +38,8 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +47,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +58,182 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: AtlasBat_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 50
+        width: 46
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 81.5}
+        - {x: -23, y: 70.5}
+        - {x: -23, y: -17.5}
+        - {x: -21, y: -79.5}
+        - {x: -15, y: -81.5}
+        - {x: 23, y: -81.5}
+        - {x: 23, y: 77.5}
+        - {x: 16, y: 81.5}
+    - name: AtlasBat_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 90
+        width: 45
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 58}
+        - {x: -22.5, y: -56}
+        - {x: -15.5, y: -58}
+        - {x: 9.5, y: -58}
+        - {x: 22.5, y: -44}
+        - {x: 22.5, y: 57}
+        - {x: 20.5, y: 58}
+    - name: AtlasBat_2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 50
+        width: 46
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 82.5}
+        - {x: -20, y: 82.5}
+        - {x: -23, y: 73.5}
+        - {x: -23, y: -62.5}
+        - {x: -17, y: -82.5}
+        - {x: 18, y: -82.5}
+        - {x: 23, y: -74.5}
+        - {x: 23, y: 64.5}
+        - {x: 22, y: 79.5}
+    - name: AtlasBat_3
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 21
+        width: 124
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: 70}
+        - {x: 39, y: 103}
+        - {x: 26, y: 106}
+        - {x: 19, y: 106}
+        - {x: 17, y: 104}
+        - {x: 16, y: 99}
+        - {x: 12, y: 107}
+        - {x: -12, y: 113}
+        - {x: -31, y: 113}
+        - {x: -62, y: 81}
+        - {x: -62, y: -102}
+        - {x: -46, y: -113}
+        - {x: 47, y: -113}
+        - {x: 62, y: -100}
+        - {x: 62, y: -21}
+      - - {x: 46, y: 85}
+        - {x: 48, y: 83}
+        - {x: 51, y: 84}
+        - {x: 51, y: 87}
+        - {x: 49, y: 89}
+        - {x: 46, y: 88}
+    - name: AtlasBat_4
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 60
+        width: 47
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 67}
+        - {x: -23.5, y: -60}
+        - {x: -22.5, y: -67}
+        - {x: 23.5, y: -67}
+        - {x: 23.5, y: 67}
+    - name: AtlasBat_5
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 56
+        width: 42
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 63.5}
+        - {x: -21, y: 45.5}
+        - {x: -21, y: -34.5}
+        - {x: -19, y: -59.5}
+        - {x: -16, y: -63.5}
+        - {x: 7, y: -63.5}
+        - {x: 12, y: -53.5}
+        - {x: 21, y: -32.5}
+        - {x: 21, y: 63.5}
+    - name: AtlasBat_6
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 107
+        width: 74
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 74}
+        - {x: -23, y: 74}
+        - {x: -37, y: 55}
+        - {x: -37, y: -52}
+        - {x: -25, y: -74}
+        - {x: 25, y: -74}
+        - {x: 37, y: -8}
+        - {x: 37, y: 49}
+        - {x: 17, y: 70}
+    - name: AtlasBat_7
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 73
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: AtlasBat_8
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 49
+        width: 111
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.5, y: 22}
+        - {x: -39.5, y: 22}
+        - {x: -54.5, y: 16}
+        - {x: -55.5, y: 14}
+        - {x: -55.5, y: -22}
+        - {x: 55.5, y: -22}
+        - {x: 55.5, y: 4}
+        - {x: 53.5, y: 12}
     outline: []
   spritePackingTag: 
   userData: 
