@@ -15,7 +15,18 @@ public class PlayerAttackController : MonoBehaviour {
 				}
 			}
 		}
-	}
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            if (inside)
+            {
+                if (coled != null)
+                {
+                    actCont.grabAmmy(coled.GetComponent<ActionController>());
+                    Destroy(coled.gameObject);
+                }
+            }
+        }
+    }
 
 	void OnTriggerStay2D(Collider2D col){
 		if(col.GetComponent<ActionController>()!=null){

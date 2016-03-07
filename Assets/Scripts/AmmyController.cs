@@ -23,7 +23,10 @@ public class AmmyController : MonoBehaviour {
 		return (cAmmy!=null?cAmmy.hurtC:0);
 	}
 	public void setAmmy(Ammy am){
-		cAmmy = am;
-		ammyLife = am.lifes;
+        if (am != null)
+        {
+            cAmmy = am;
+            ammyLife = am.lifes;
+        }
 	}
 }
