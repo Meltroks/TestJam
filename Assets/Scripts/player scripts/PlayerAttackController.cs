@@ -28,7 +28,7 @@ public class PlayerAttackController : MonoBehaviour {
                 if (coled != null)
                 {
                     if(coled.GetComponent<EnemyActionController>()!=null){
-                        TimeController.main.setTime(0.5f);
+                        TimeController.main.setTime(0.1f);
                         hc = 50;
                         sTIme = Time.time;
                         StartCoroutine(ch(coled.GetComponent<EnemyActionController>()));
@@ -52,10 +52,10 @@ public class PlayerAttackController : MonoBehaviour {
 	}
     IEnumerator ch(EnemyActionController enAct)
     {
-        if(Time.time - sTIme < 5/actCont.getTime())
+        if(Time.time - sTIme < 5)
         {
             gCont.showSlider(hc);
-            if (Input.GetKeyDown(KeyCode.Space)) hc=(hc+8*actCont.getTime())%100;
+            if (Input.GetKeyDown(KeyCode.Space)) hc=(hc+10*actCont.getTime()*2)%100;
             else hc-=actCont.getTime();
             if(hc<0) hc = 0;
             yield return new WaitForSeconds(0.01f);

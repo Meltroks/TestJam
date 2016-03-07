@@ -48,6 +48,11 @@ public class GuiController : MonoBehaviour {
         {
             GUI.Box(new Rect(x* s * 20, Screen.height-s*20, s * 20, s * 20), cols[x]+"");
         }
+
+        if(cAmmy!=null) GUI.Box(new Rect(Screen.width - s * 20, Screen.height - s * 20, s * 20, s * 20), cAmmy.name);
+        else GUI.Box(new Rect(Screen.width - s * 20, Screen.height - s * 20, s * 20, s * 20), "none");
+
+
         if (showQTE)
         {
             GUI.HorizontalSlider(new Rect(Screen.width/2-s*10, Screen.height / 2 - s * 50, s * 20, s * 100), qteP, 0f, 100f);
