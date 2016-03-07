@@ -5,7 +5,8 @@ public class PlayerActionController : ActionController {
 	public bool active;
 	public PlayerMovingController movCont;
 	public PlayerAttackController attCont;
-	public StatsController statsCont;
+    public PlayerInventoryController invCont;
+    public StatsController statsCont;
 	public AmmyController ammyCont;
 
 	public override void getHit(float h){
@@ -16,12 +17,25 @@ public class PlayerActionController : ActionController {
 		Debug.Log("you made hit ");
 		ammyCont.hurtAmmy(ammyCont.getH());
 	}
-	void Update(){
+    public override void getItem(Item item)
+    {
+        Debug.Log("Got Item "+item.name);
+        invCont.putItem(item);
+        Destroy(item.gameObject);
+    }
+    public override void grabAmmy(ActionController ammyActCont)
+    {
+        if (ammyActCont.gameObject.GetComponent<EnemyActionController>()!=null)
+        {
+            ammyCont.setAmmy(ammyActCont.gameObject.GetComponent<EnemyActionController>().myAmmy);
+        }
+    }
+    void Update(){
 		if(statsCont.getLifes()<=0){
 			active = false;
 		}
 		if(active){
-			attCont.makeHit(ammyCont.getH());
+			attCont.makeHit(ammyCont.getH()*statsCont.getPower());
 			movCont.move();
 		}
 	}

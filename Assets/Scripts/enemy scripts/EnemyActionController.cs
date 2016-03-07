@@ -7,6 +7,7 @@ public class EnemyActionController : ActionController {
 	public AmmyController ammyCont;
 	public EnemyAttackController attCont;
 	public EnemyMovingController movCont;
+    public Ammy myAmmy;
 
 	public override void getHit(float h){
 		statsCont.hurt(h);
