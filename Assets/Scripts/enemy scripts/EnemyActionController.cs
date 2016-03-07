@@ -21,12 +21,12 @@ public class EnemyActionController : ActionController {
 			die();
 		}
 		if(active){
-			attCont.makeHit(ammyCont.getH());
+			attCont.makeHit(ammyCont.getH()*statsCont.getPower());
 			movCont.move();
 		}
 	}
 	void die(){
 		Debug.Log("i die!");
-		gameObject.SetActive(false);
+        Destroy(transform.gameObject);
 	}
 }

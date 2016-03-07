@@ -8,8 +8,9 @@ public class PlayerActionController : ActionController {
     public PlayerInventoryController invCont;
     public StatsController statsCont;
 	public AmmyController ammyCont;
+    public GuiController gCont;
 
-	public override void getHit(float h){
+    public override void getHit(float h){
 		statsCont.hurt(h);
 		Debug.Log("got hit "+h);
 	}
@@ -35,6 +36,7 @@ public class PlayerActionController : ActionController {
 			active = false;
 		}
 		if(active){
+            gCont.showLifes(statsCont.getLifes(),statsCont.getMaxLifes());
 			attCont.makeHit(ammyCont.getH()*statsCont.getPower());
 			movCont.move();
 		}

@@ -4,8 +4,9 @@ using System.Collections;
 public class PlayerAttackController : MonoBehaviour {
 	public ActionController actCont;
 	public ActionController coled;
+    public GuiController gCont;
 	bool inside;
-
+    float sTIme,hc;
 	public void makeHit(float h){
 		if(Input.GetKeyDown(KeyCode.P)){
 			if(inside){
@@ -21,8 +22,9 @@ public class PlayerAttackController : MonoBehaviour {
             {
                 if (coled != null)
                 {
-                    actCont.grabAmmy(coled.GetComponent<ActionController>());
-                    Destroy(coled.gameObject);
+                    sTIme = Time.time;
+                    StartCoroutine(ch());
+                    
                 }
             }
         }
@@ -40,4 +42,20 @@ public class PlayerAttackController : MonoBehaviour {
 		inside = false;
 		coled = null;
 	}
+    IEnumerator ch()
+    {
+        if(Time.time - sTIme < 10)
+        {
+            gCont.showSlider(hc);
+            if (Input.GetKeyDown(KeyCode.Space)) hc++;
+            else hc--;
+        }
+        else
+        {
+            gCont.hideSLider();
+            actCont.grabAmmy(coled.GetComponent<ActionController>());
+            Destroy(coled.gameObject);
+        }
+        yield return new WaitForSeconds(0.5f);
+    }
 }

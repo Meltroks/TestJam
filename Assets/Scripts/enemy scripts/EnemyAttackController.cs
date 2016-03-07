@@ -19,10 +19,10 @@ public class EnemyAttackController : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D col){
-		if(col.GetComponent<ActionController>()!=null){
-			if(col.GetComponent<ActionController>() != actCont){
+		if(col.GetComponent<PlayerActionController>()!=null){
+			if(col.GetComponent<PlayerActionController>() != actCont){
 				inside = true;
-				coled = col.GetComponent<ActionController>();
+				coled = col.GetComponent<PlayerActionController>();
 			}
 		}	
 	}
