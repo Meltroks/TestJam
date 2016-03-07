@@ -10,6 +10,12 @@ public class PlayerActionController : ActionController {
 	public AmmyController ammyCont;
     public GuiController gCont;
 
+	public float time;
+
+    public override void setTime(float time){
+        this.time = time;
+    }
+
     public override void getHit(float h){
 		statsCont.hurt(h);
 		Debug.Log("got hit "+h);

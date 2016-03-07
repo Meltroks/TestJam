@@ -12,7 +12,7 @@ public class GuiController : MonoBehaviour {
 
     float sTime = 0;
     float qteP = 50;
-    bool showQTE = false;
+    public bool showQTE = false;
 
     public void showLifes(float lifes,float maxLifes)
     {
@@ -50,7 +50,7 @@ public class GuiController : MonoBehaviour {
         }
         if (showQTE)
         {
-            GUI.Slider(new Rect(Screen.width/2-s*10, Screen.height / 2 - s * 50, s * 20, s * 100), qteP, 100, 50, 100,null,null,true,0);
+            GUI.HorizontalSlider(new Rect(Screen.width/2-s*10, Screen.height / 2 - s * 50, s * 20, s * 100), qteP, 0f, 100f);
         }
     }
     

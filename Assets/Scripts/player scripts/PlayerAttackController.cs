@@ -6,7 +6,9 @@ public class PlayerAttackController : MonoBehaviour {
 	public ActionController coled;
     public GuiController gCont;
 	bool inside;
-    float sTIme,hc;
+    public float sTIme,hc;
+
+    
 	public void makeHit(float h){
 		if(Input.GetKeyDown(KeyCode.P)){
 			if(inside){
@@ -22,9 +24,11 @@ public class PlayerAttackController : MonoBehaviour {
             {
                 if (coled != null)
                 {
-                    sTIme = Time.time;
-                    StartCoroutine(ch());
-                    
+                    if(coled.GetComponent<EnemyActionController>()!=null){
+                        hc = 50;
+                        sTIme = Time.time;
+                        StartCoroutine(ch(coled.GetComponent<EnemyActionController>()));
+                    }
                 }
             }
         }
@@ -42,20 +46,23 @@ public class PlayerAttackController : MonoBehaviour {
 		inside = false;
 		coled = null;
 	}
-    IEnumerator ch()
+    IEnumerator ch(EnemyActionController enAct)
     {
         if(Time.time - sTIme < 10)
         {
             gCont.showSlider(hc);
-            if (Input.GetKeyDown(KeyCode.Space)) hc++;
-            else hc--;
+            if (Input.GetKeyDown(KeyCode.Space)) hc=(hc+5)%100;
+            else hc-=1;
+            if(hc<0) hc = 0;
+            yield return new WaitForSeconds(0.01f);
+            StartCoroutine(ch(enAct));
         }
         else
         {
             gCont.hideSLider();
-            actCont.grabAmmy(coled.GetComponent<ActionController>());
-            Destroy(coled.gameObject);
+            actCont.getHit(Mathf.Abs(hc-50));
+            actCont.grabAmmy(enAct);
+            Destroy(enAct.gameObject);
         }
-        yield return new WaitForSeconds(0.5f);
     }
 }

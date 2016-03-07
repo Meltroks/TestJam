@@ -6,4 +6,5 @@ public class ActionController : MonoBehaviour {
 	public virtual void makeHit(){}
     public virtual void getItem(Item item) { }
     public virtual void grabAmmy(ActionController ammyActCont) { }
+    public virtual void setTime(float time){}
 }
