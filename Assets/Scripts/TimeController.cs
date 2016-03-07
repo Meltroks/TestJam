@@ -16,4 +16,8 @@ public class TimeController : MonoBehaviour {
             act.setTime(time);
         }
     }
+    public float getTime()
+    {
+        return time;
+    }
 }

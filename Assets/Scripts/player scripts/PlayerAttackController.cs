@@ -28,7 +28,7 @@ public class PlayerAttackController : MonoBehaviour {
                 if (coled != null)
                 {
                     if(coled.GetComponent<EnemyActionController>()!=null){
-                        TimeController.main.setTime(0.1f);
+                        TimeController.main.setTime(TimeController.main.getTime()*0.1f);
                         hc = 50;
                         sTIme = Time.time;
                         StartCoroutine(ch(coled.GetComponent<EnemyActionController>()));
