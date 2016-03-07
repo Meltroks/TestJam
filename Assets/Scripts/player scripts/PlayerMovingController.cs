@@ -4,9 +4,10 @@ using System.Collections;
 public class PlayerMovingController : MonoBehaviour {
 	public float speed;
 	public GameObject attackCol;
+    public ActionController actCol;
 
 	public void move(){
-		Vector2 velDir = new Vector2 (Input.GetAxis ("Horizontal") * speed, Input.GetAxis ("Vertical") * speed);
+		Vector2 velDir = new Vector2 (Input.GetAxis ("Horizontal") * speed * actCol.getTime(), Input.GetAxis ("Vertical") * speed * actCol.getTime());
 		if(attackCol!=null && (Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.D)||Input.GetKey(KeyCode.S)||Input.GetKey(KeyCode.W)))
 			attackCol.transform.localPosition = new Vector2(
 				(Input.GetKey(KeyCode.A)?-1:0) + (Input.GetKey(KeyCode.D)?1:0),

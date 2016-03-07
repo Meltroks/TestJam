@@ -10,7 +10,7 @@ public class EnemyAttackController : MonoBehaviour {
 
 	public void makeHit(float h){
 		if(inside){
-			if(coled!=null && Time.time - lTime>=attackCoolDown){
+			if(coled!=null && Time.time - lTime>=attackCoolDown/actCont.getTime()){
 				coled.getHit(h);
 				actCont.makeHit();
 				lTime = Time.time;

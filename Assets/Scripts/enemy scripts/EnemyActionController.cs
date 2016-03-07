@@ -9,7 +9,18 @@ public class EnemyActionController : ActionController {
 	public EnemyMovingController movCont;
     public Ammy myAmmy;
 
-	public override void getHit(float h){
+    public float time;
+
+    public override void setTime(float time)
+    {
+        this.time = time;
+    }
+    public override float getTime()
+    {
+        return time;
+    }
+
+    public override void getHit(float h){
 		statsCont.hurt(h);
 	}
 	public override void makeHit(){
