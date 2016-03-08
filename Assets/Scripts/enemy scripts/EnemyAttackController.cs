@@ -10,7 +10,7 @@ public class EnemyAttackController : MonoBehaviour {
 
 	public void makeHit(float h){
 		if(inside){
-			if(coled!=null && Time.time - lTime>=attackCoolDown){
+			if(coled!=null && Time.time - lTime>=attackCoolDown/actCont.getTime()){
 				coled.getHit(h);
 				actCont.makeHit();
 				lTime = Time.time;
@@ -19,10 +19,10 @@ public class EnemyAttackController : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D col){
-		if(col.GetComponent<ActionController>()!=null){
-			if(col.GetComponent<ActionController>() != actCont){
+		if(col.GetComponent<PlayerActionController>()!=null){
+			if(col.GetComponent<PlayerActionController>() != actCont){
 				inside = true;
-				coled = col.GetComponent<ActionController>();
+				coled = col.GetComponent<PlayerActionController>();
 			}
 		}	
 	}

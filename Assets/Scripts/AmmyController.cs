@@ -4,6 +4,7 @@ using System.Collections;
 public class AmmyController : MonoBehaviour {
 	public Ammy cAmmy,sAmmy;
 	public float ammyLife;
+    public GuiController gCont;
 
 	void Awake(){
 		setAmmy(sAmmy);
@@ -23,6 +24,7 @@ public class AmmyController : MonoBehaviour {
 		return (cAmmy!=null?cAmmy.hurtC:0);
 	}
 	public void setAmmy(Ammy am){
+        if (gCont != null)  gCont.showAmmy(am);
         if (am != null)
         {
             cAmmy = am;
